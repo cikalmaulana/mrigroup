@@ -1,0 +1,78 @@
+// Footer 
+
+.footer {
+  background-color: $gray-800; 
+  padding: 70px 0px 0px 0px;
+  color: $gray-700;
+  font-size: 15px;
+  line-height: 26px;
+  .footer-widget {    
+    .footer-widget-title {
+      font-size: 18px;
+      line-height: 28px;
+      color: $white;
+      margin-bottom: 20px;    
+    }
+    .footer-links {
+      .list-group {
+        .list-group-item {
+          padding: 0px;
+          margin-bottom: 0px;
+          background-color: transparent;
+          border: none;
+          &:before {
+            content: "\f061";
+            font-family: $font-awesome;
+            font-weight: 900;
+            padding-right: 4px;
+            font-size: 10px;
+          }
+          .list-group-link {
+            font-size: 15px;
+            line-height: 28px;
+            color: $gray-700;
+            text-decoration: none;
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    .social-links{
+      font-size: 20px;
+      a{
+        color: $gray-700;
+        &:hover{
+          color: $white;
+        }
+      }
+
+    }
+  }
+}
+
+.tiny-footer {  
+  background-color: $gray-900;
+  padding: 15px 0px;
+  margin-top: 70px;
+  line-height: 26px;
+  font-size: 14px;
+
+  
+  
+  .tiny-footer-links {   
+    text-align: right;
+        a {
+          font-size: 13px;
+          font-weight: 500;
+          color: $gray-700;
+          padding: 0px 10px;
+          line-height: 20px;
+          &:hover {
+            color: $white;
+          }
+        }
+     
+}
+}

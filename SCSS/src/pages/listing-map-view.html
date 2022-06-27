@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../partials/head.html", {
+      "pageTitle": "Spacely"
+    })
+  </head>
+
+  <body>
+     @@include("../partials/navbar.html",
+    { "classList": "navbar-light bg-white"
+  })
+    <!-- pageheader start -->
+    <div
+      class="pageheader"
+      style="
+        background: url(../assets/images/pageheader-img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="pageheader-caption">
+              <h1 class="pageheader-caption-title">Layout map view</h1>
+              <p class="pageheader-caption-text">
+                Change your layout in grid and list view example using bootstrap
+                4. Design elements using Bootstrap, javascript, css, and html.
+                ...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pageheader close -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+          <!-- breadcrumb start -->
+          <div class="custom-breadcrumb">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Layout map view</li>
+              </ol>
+            </nav>
+          </div>
+          <!-- breadcrumb close -->
+        </div>
+      </div>
+    </div>
+    <div class="pb-5 pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="row">
+              <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 mb-4">
+                <!-- swich start -->
+                <div class="page-switcher">
+                  <a href="listing-list-view.html"
+                    ><i
+                      class="fas fa-list icon-shape border p-3 rounded"
+                    ></i
+                  ></a>
+                  <a href="listing-grid-view.html"
+                    ><i
+                      class="fas fa-th icon-shape border p-3 rounded"
+                    ></i
+                  ></a>
+                  <a href="listing-map-view.html" class="active"
+                    ><i
+                      class="fas fa-map-marker-alt icon-shape border p-3 bg-primary text-white rounded"
+                    ></i
+                  ></a>
+                </div>
+                <!-- swich close -->
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+                <!-- select start -->
+                <select
+                  class="select2 form-control custom-select"
+                  id="search-hide"
+                >
+                  <option selected>Default</option>
+                  <option value="1">Most Viewed</option>
+                  <option value="2">Newest Listing</option>
+                  <option value="3">Older Listing</option>
+                </select>
+                <!-- select close -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="mapid_2" class="map" style="height: 800px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <!-- filter sidebar -->
+            <div class="card">
+              <div class="card-body">
+                <h3 class="mb-0 h4">
+                  <span class="p text-primary mr-2"
+                    ><i class="fas fa-sliders-h"></i></span
+                  >Filter
+                </h3>
+              </div>
+              <!-- filter widget -->
+              <div class="card-body border-top">
+                <a
+                  class="d-block h5 mb-0"
+                  data-toggle="collapse"
+                  href="#collapseExample"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Price <i class="fas fa-angle-down ml-2 float-right"></i>
+                </a>
+                <div class="collapse show" id="collapseExample">
+                  <div class="py-3">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck1"
+                    />
+                    <label class="custom-control-label" for="customCheck1"
+                      >$0 - $100
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck2"
+                    />
+                    <label class="custom-control-label" for="customCheck2"
+                      >$100 - $200
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck3"
+                    />
+                    <label class="custom-control-label" for="customCheck3"
+                      >$200 - $300
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck4"
+                    />
+                    <label class="custom-control-label" for="customCheck4"
+                      >$300 - $400
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck5"
+                    />
+                    <label class="custom-control-label" for="customCheck5"
+                      >$400 - $500
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck6"
+                    />
+                    <label class="custom-control-label" for="customCheck6"
+                      >$500 - $600
+                    </label>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <!-- filter widget -->
+              <div class="card-body border-top">
+                <a
+                  class="mb-0 d-block h5"
+                  data-toggle="collapse"
+                  href="#collapseExample2"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample2"
+                >
+                  Capacity <i class="fas fa-angle-down ml-2 float-right"></i>
+                </a>
+                <div class="collapse show" id="collapseExample2">
+                  <div class="py-3">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck7"
+                    />
+                    <label class="custom-control-label" for="customCheck7"
+                      >1 Person
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck8"
+                    />
+                    <label class="custom-control-label" for="customCheck8"
+                      >2 - 5 Person
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck9"
+                    />
+                    <label class="custom-control-label" for="customCheck9"
+                      >5 - 10 Person
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck10"
+                    />
+                    <label class="custom-control-label" for="customCheck10"
+                      >10 - 15 Person
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck11"
+                    />
+                    <label class="custom-control-label" for="customCheck11"
+                      >15 - 25 person
+                    </label>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <!-- filter widget -->
+              <div class="card-body border-top">
+                <a
+                  class="mb-0 d-block h5"
+                  data-toggle="collapse"
+                  href="#collapseExample3"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample3"
+                >
+                  Size <i class="fas fa-angle-down ml-2 float-right"></i>
+                </a>
+                <div class="collapse show" id="collapseExample3">
+                <div class="py-3">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck12"
+                    />
+                    <label class="custom-control-label" for="customCheck12"
+                      >100 Sq.Ft
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck13"
+                    />
+                    <label class="custom-control-label" for="customCheck13"
+                      >100 Sq.Ft - 200 Sq.Ft
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck14"
+                    />
+                    <label class="custom-control-label" for="customCheck14"
+                      >200 Sq.Ft - 300 Sq.Ft
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck15"
+                    />
+                    <label class="custom-control-label" for="customCheck15"
+                      >300 Sq.Ft - 400 Sq.Ft
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck16"
+                    />
+                    <label class="custom-control-label" for="customCheck16"
+                      >400 Sq.Ft - 500 Sq.Ft
+                    </label>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <!-- filter widget -->
+              <div class="card-body border-top">
+                <a href="#" class="btn btn-primary btn-block">Search</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include("../partials/footer.html")
+
+    <!-- ============================================================== -->
+    <!-- end main wrapper -->
+    <!-- ============================================================== -->
+    @@include("../partials/scripts.html")
+  </body>
+</html>

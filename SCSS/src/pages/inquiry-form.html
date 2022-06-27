@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../partials/head.html", {
+      "pageTitle": "Spacely"
+    })
+  </head>
+
+  <body>
+     @@include("../partials/navbar.html",
+    { "classList": "navbar-light bg-white"
+  })
+    <!-- header close -->
+    <!-- pageheader start  -->
+    <div
+      class="pageheader"
+      style="
+        background: url(../assets/images/pageheader-img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="pageheader-caption">
+              <h1 class="pageheader-caption-title">Send Inquiry</h1>
+              <p class="pageheader-caption-text">
+                Lorem ipsum dolor sit amet, consecteturconsectetur adipiscing
+                eliorbi fringilla ipsum tellusa varius loremid loremid blandit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- pageheader close  -->
+    <!-- breadcrumb start  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+          <div class="custom-breadcrumb">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Inquiry Form</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- breadcrumb close  -->
+    <div class="pb-5 pt-5">
+      <div class="container">
+        <div class="row">
+          <div
+            class="offset-xl-2 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12"
+          >
+            <!-- inquiry form start  -->
+            <div class="inquiry-form">
+              <h3 class="h2 mb-3">
+                We can help you list your space, just send us a short message.
+              </h3>
+              <h5 class="mb-4">Choose Your Space Type</h5>
+              <ul class="list-inline row">
+                <li class="list-inline-item col-3 mb-2">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="officespace"
+                    />
+                    <label class="custom-control-label" for="officespace"
+                      >Office Space</label
+                    >
+                  </div>
+                </li>
+                <li class="list-inline-item col-3 mb-2">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="eventspace"
+                    />
+                    <label class="custom-control-label" for="eventspace"
+                      >Event Space</label
+                    >
+                  </div>
+                </li>
+                <li class="list-inline-item col-3 mb-2">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="coworkingspace"
+                    />
+                    <label class="custom-control-label" for="coworkingspace"
+                      >Coworking Space</label
+                    >
+                  </div>
+                </li>
+                <li class="list-inline-item col-3 mb-2">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="retailspace"
+                    />
+                    <label class="custom-control-label" for="retailspace"
+                      >Retail Space</label
+                    >
+                  </div>
+                </li>
+                <li class="list-inline-item col-3 mb-2">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="meetingspace"
+                    />
+                    <label class="custom-control-label" for="meetingspace"
+                      >Meeting Space</label
+                    >
+                  </div>
+                </li>
+              </ul>
+              <form class="form-row">
+                <div class="form-group col-6">
+                  <label for="inquiryname"
+                    >Name<span class="form-remark">*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="inquiryname"
+                    aria-describedby="inquiryname"
+                    placeholder="John Deo"
+                    required=""
+                  />
+                </div>
+                <div class="form-group col-6">
+                  <label for="inquiryemail"
+                    >Email<span class="form-remark">*</span></label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    id="inquiryemail"
+                    aria-describedby="inquiryemail"
+                    placeholder="Enter email"
+                    required=""
+                  />
+                </div>
+                <div class="form-group col-6">
+                  <label for="inquiryphone"
+                    >Phone<span class="form-remark">*</span></label
+                  >
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="form-control"
+                    id="inquiryphone"
+                    aria-describedby="inquiryphone"
+                    placeholder="+91"
+                    required=""
+                  />
+                </div>
+                <div class="form-group col-6">
+                  <label for="companyname"
+                    >Company Name<span class="form-remark">*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    id="companyname"
+                    aria-describedby="companyname"
+                    placeholder="example"
+                    required=""
+                  />
+                </div>
+                <div class="form-group col-6">
+                  <label for="country">Country</label>
+                  <select class="select2 custom-select" id="country">
+                    <option selected>United State</option>
+                    <option value="1">India</option>
+                    <option value="2">United Kingdom</option>
+                    <option value="3">Russia</option>
+                  </select>
+                </div>
+                <div class="form-group col-6">
+                  <label for="city">City</label>
+                  <select class="select2 custom-select" id="city">
+                    <option selected>New york</option>
+                    <option value="1">Ahmedabad</option>
+                    <option value="2">London</option>
+                    <option value="3">Moscow</option>
+                  </select>
+                </div>
+                <div class="form-group col-12">
+                  <label for="inquirydescription">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="inquirydescription"
+                    rows="4"
+                    placeholder="Write short message"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mb-3">
+                  Send Inquiry
+                </button>
+                <div class="inquiry-bottom-text">
+                  <small class="form-remark-text"
+                    ><span class="form-remark">*</span> Required Filed</small
+                  >
+                  <a href="#" class="privacy-policy-link">Privacy Policy</a>
+                </div>
+              </form>
+            </div>
+            <!-- inquiry form close  -->
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include("../partials/footer.html")
+
+    <!-- ============================================================== -->
+    <!-- end main wrapper -->
+    <!-- ============================================================== -->
+    @@include("../partials/scripts.html")
+  </body>
+</html>

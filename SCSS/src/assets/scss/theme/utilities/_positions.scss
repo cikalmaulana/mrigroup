@@ -1,0 +1,33 @@
+// position 
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+.card-overlay-badge {
+  @include position(absolute, $top: 10px, $left: 10px);
+}
+
+.card-overlay-category {
+  @include position(absolute, $bottom: 10px, $right: 10px);
+}
+
+.card-overlay-btn{
+  @include position(absolute, $top: 10px, $right: 10px);
+}
+
+.sticky-post{
+  @include position(absolute, $top: 10px, $left: 10px);
+}
+
+@media (min-width:1200px){
+  .hero-search-left{@include position(relative, $left: 80px); z-index:2;}
+}
+
+
+ 
+ 

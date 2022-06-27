@@ -1,0 +1,74 @@
+// social media
+
+@mixin social-account($size, $radius: 0, $padding:0) {
+    width: $size;
+    height: $size;
+    padding: $padding;    
+    border-radius: $radius;
+    display: inline-flex;
+    align-items: center;
+    text-align: center; 
+    justify-content: center; 
+    vertical-align: middle;     
+  }  
+  .btn-social{
+    @include social-account(45px, $radius: 4px, $padding: 16px);
+  }
+
+  $color-facebook: #3b5998;
+  $color-twitter: #00acee;
+  $color-linkedin: #0e76a8;
+  $color-pinterest: #c8232c;
+  $color-instagram: #3f729b;
+
+  .btn-facebook{
+      color: $white;
+      background-color: $color-facebook;
+      @include hover()
+      {
+        color: $white;
+        background-color: $black; 
+      }
+
+  }
+  .btn-twitter{
+    color: $white;
+    background-color:  $color-twitter;
+    @include hover()
+    {
+      color: $white;
+      background-color: $black; 
+    }
+
+}
+.btn-linkedin{
+    color: $white;
+    background-color:  $color-linkedin;
+    @include hover()
+    {
+      color: $white;
+      background-color: $black; 
+    }
+
+}
+.btn-pinterest{
+    color: $white;
+    background-color:  $color-pinterest;
+    @include hover()
+    {
+      color: $white;
+      background-color: $black; 
+    }
+
+}
+.btn-instagram{
+    color: $white;
+    background-color:  $color-instagram;
+    @include hover()
+    {
+      color: $white;
+      background-color: $black; 
+    }
+
+}
+

@@ -1,0 +1,225 @@
+// Color system
+
+$white: #fff !default;
+$gray-100: #f5f5f9 !default;
+$gray-200: #e9ecef !default;
+$gray-300: #efeef1 !default;
+$gray-400: #dcdce5 !default;
+$gray-500: #bbb9cc !default;
+$gray-600: #556899 !default;
+$gray-700: #7F8299 !default;
+$gray-800: #242530 !default;
+$gray-900: #1c1d25 !default;
+$black: #23263e !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900
+  ),
+  $grays
+);
+
+$blue: #1455FE !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #fa2aa4 !default;
+$red: #dc3546 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc105 !default;
+$green: #0cc95c !default;
+$teal: #ffe20c !default;
+$cyan: #00cceb !default;
+$primary: $blue !default;
+$secondary: $pink !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-base: "Barlow", "sans-serif;" !default;
+$font-awesome: "Font Awesome 5 Free";
+
+// stylelint-enable value-keyword-case
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.6 !default;
+$line-height-lg: 1.5 !default;
+$line-height-sm: 1 !default;
+$h1-font-size: $font-size-base * 2.625 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.625 !default;
+$h4-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: $font-size-base * 1.125 !default;
+$h6-font-size: $font-size-base !default;
+$headings-font-family: null !default;
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.3 !default;
+$headings-color: #022170 !default;
+$link-hover-decoration: none !default;
+$text-muted:                  $gray-500 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+
+$yiq-text-dark: $black !default;
+$yiq-text-light: $white !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white !default;
+$body-color: $gray-600 !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25
+    ),
+    2: (
+      $spacer * 0.5
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5
+    ),
+    5: (
+      $spacer * 2
+    ),
+    6: (
+      $spacer * 2.5
+    ),
+    7: (
+      $spacer * 3
+    ),
+    8: (
+      $spacer * 3.5
+    ),
+    9: (
+      $spacer * 4
+    ),
+    10: (
+      $spacer * 4.5
+    ),
+    11: (
+      $spacer * 5
+    ),
+    12: (
+      $spacer * 6.5
+    ),
+    13: (
+      $spacer * 7
+    ),
+    14: (
+      $spacer * 7.5
+    ),
+    15: (
+      $spacer * 8
+    ),
+    16: (
+      $spacer * 8.5
+    ),
+    17: (
+      $spacer * 9
+    ),
+    18: (
+      $spacer * 9.5
+    )
+  ),
+  $spacers
+);
+
+$border-radius: 0.25rem !default;
+$border-radius-lg: 0.4rem !default;
+$border-radius-sm: 0.2rem !default;
+
+$input-btn-padding-y: 0.5rem !default;
+$input-btn-padding-x: 1rem !default;
+
+$input-btn-font-family: null !default;
+$input-btn-font-size: $font-size-base !default;
+
+$input-btn-padding-y-sm: 0.563rem !default;
+$input-btn-padding-x-sm: 0.875rem !default;
+
+$input-btn-padding-y-lg: 0.563rem !default;
+$input-btn-padding-x-lg: 1.475rem !default;
+
+
+$input-bg: $white !default;
+$btn-font-weight: 500 !default;
+$input-btn-line-height: $line-height-lg !default;
+$card-spacer-y: 0.75rem !default;
+$card-spacer-x: 1rem !default;
+$card-border-color: $gray-300 !default;
+$pagination-padding-y: .82rem !default;
+$pagination-padding-x: 1.2rem !default;
+
+
+// Badges
+
+$badge-font-size:                   12px !default;
+$badge-font-weight:                 $font-weight-medium !default;
+$badge-padding-y:                   .35em !default;
+$badge-padding-x:                   .4em !default;
+$badge-border-radius:               $border-radius !default;
+
+$custom-checkbox-indicator-border-radius: $border-radius-sm !default;
+$small-font-size: 13px !default;
+
+
+// Avatar
+
+$avatar-size-xs: 2.25rem !default;
+$avatar-size-sm: 2.75rem !default;
+$avatar-size-md: 4rem !default;
+$avatar-size-lg: 6rem !default;
+
+
+// icon
+
+$icon-size-xs: 1.25rem !default;
+$icon-size-sm: 1.875rem !default;
+$icon-size-md: 2.2rem !default;
+$icon-size-lg: 2.813rem !default;
+$icon-size-xl: 4.375rem !default;
+
+
+
+$enable-responsive-font-sizes: true;

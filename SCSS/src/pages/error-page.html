@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include("../partials/head.html", {
+        "pageTitle": "Spacely"
+      })
+</head>
+
+<body>
+    <!-- error start -->
+        <div class="min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-2 col-xl-8 col-md-12 col-sm-12 col-12 text-center">
+                        <div class="mb-8">
+                            <img src="../assets/images/error-img.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="error-page-content">
+                            <h1 class="h3 font-weight-bold">Sorry. The page you are looking for does not exist</h1>
+                            <p class="error-page-content-text">We may have removed a page to which you found a link, or you may have the wrong address for the page you are looking for.
+                                Recommended actions</p>
+                            <a href="../index.html" class="btn btn-secondary">Back to homepage</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- error close -->
+    
+    <!-- ============================================================== -->
+    <!-- end main wrapper -->
+    <!-- ============================================================== -->
+  @@include("../partials/scripts.html")
+</body>
+
+</html>

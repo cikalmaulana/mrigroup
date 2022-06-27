@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../partials/head.html", { "pageTitle": "Spacely" })
+  </head>
+
+  <body>
+    <div class="listinghalfmap-body">
+      @@include("../partials/navbar.html",{
+         "classList": "navbar-light bg-white fixed-top" 
+    })
+      <!-- listing map filter start -->
+      <div class="listingmap-filter">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="filter-section">
+                <span class="filter-section-title"
+                  ><i class="fas fa-sliders-h filter-icon"></i>Filter</span
+                >
+                <!-- filter btn start -->
+                <div class="btn-group" role="group">
+                  <button
+                    id="term"
+                    type="button"
+                    class="btn btn-white btn-sm dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Term
+                  </button>
+                  <div class="dropdown-menu term-menu" aria-labelledby="term">
+                    <span class="with-arrow"><span class=""></span></span>
+                    <div class="dropdown-menu-body term-menu-body stopevent">
+                      <select
+                        class="form-control custom-select"
+                        id="search-hide"
+                      >
+                        <option value="1">Hourly</option>
+                        <option value="2">Daily</option>
+                        <option value="3">Monthly</option>
+                        <option value="4">Yearly</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-menu-footer">
+                      <a href="#" class="btn btn-primary btn-sm">Apply</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- filter btn start -->
+                <div class="btn-group dropdown stopevent" role="group">
+                  <button
+                    id="price"
+                    type="button"
+                    class="btn btn-white btn-sm dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Price
+                  </button>
+                  <div class="dropdown-menu price-menu" aria-labelledby="price">
+                    <span class="with-arrow"><span class=""></span></span>
+                    <div class="dropdown-menu-body price-menu-body">
+                      <div id="slider-padding"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- filter btn start -->
+                <div class="btn-group" role="group">
+                  <button
+                    id="capacity"
+                    type="button"
+                    class="btn btn-white btn-sm dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Capacity
+                  </button>
+                  <div
+                    class="dropdown-menu capacity-menu"
+                    aria-labelledby="capacity"
+                  >
+                    <span class="with-arrow"><span class=""></span></span>
+                    <div
+                      class="dropdown-menu-body capacity-menu-body stopevent"
+                    >
+                      <h4 class="menu-title">Capacity</h4>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck1"
+                        />
+                        <label class="custom-control-label" for="customCheck1"
+                          >1</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck2"
+                        />
+                        <label class="custom-control-label" for="customCheck2"
+                          >2-5</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck3"
+                        />
+                        <label class="custom-control-label" for="customCheck3"
+                          >6-10</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck4"
+                        />
+                        <label class="custom-control-label" for="customCheck4"
+                          >10-15</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck5"
+                        />
+                        <label class="custom-control-label" for="customCheck5"
+                          >16-20</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck6"
+                        />
+                        <label class="custom-control-label" for="customCheck6"
+                          >21-30</label
+                        >
+                      </div>
+                    </div>
+                    <div class="dropdown-menu-footer">
+                      <a href="#" class="btn btn-primary btn-sm">Apply</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- filter btn start -->
+                <div class="btn-group" role="group">
+                  <button
+                    id="size"
+                    type="button"
+                    class="btn btn-white btn-sm dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Size
+                  </button>
+                  <div class="dropdown-menu size-menu" aria-labelledby="size">
+                    <span class="with-arrow"><span class=""></span></span>
+                    <div class="dropdown-menu-body size-menu-body stopevent">
+                      <h4 class="menu-title">Size</h4>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck7"
+                        />
+                        <label class="custom-control-label" for="customCheck7"
+                          >300Sq.Ft</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck8"
+                        />
+                        <label class="custom-control-label" for="customCheck8"
+                          >301 Sq.Ft - 500Sq.Ft</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck9"
+                        />
+                        <label class="custom-control-label" for="customCheck9"
+                          >501 Sq.Ft - 600Sq.Ft</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck10"
+                        />
+                        <label class="custom-control-label" for="customCheck10"
+                          >601 Sq.Ft - 700Sq.Ft</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck11"
+                        />
+                        <label class="custom-control-label" for="customCheck11"
+                          >701 Sq.Ft - 800Sq.Ft</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck12"
+                        />
+                        <label class="custom-control-label" for="customCheck12"
+                          >801 Sq.Ft - 900Sq.Ft</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck13"
+                        />
+                        <label class="custom-control-label" for="customCheck13"
+                          >901 Sq.Ft - 1000Sq.Ft</label
+                        >
+                      </div>
+                    </div>
+                    <div class="dropdown-menu-footer">
+                      <a href="#" class="btn btn-primary btn-sm">Apply</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- filter btn start -->
+                <div class="btn-group" role="group">
+                  <button
+                    id="location"
+                    type="button"
+                    class="btn btn-white btn-sm dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Location
+                  </button>
+                  <div
+                    class="dropdown-menu location-menu"
+                    aria-labelledby="location"
+                  >
+                    <span class="with-arrow"><span class=""></span></span>
+                    <div
+                      class="dropdown-menu-body location-menu-body stopevent"
+                    >
+                      <h4 class="menu-title">Location</h4>
+                      <select class="select2 form-control custom-select">
+                        <option>Search By Location</option>
+                        <option value="AK">Alaska</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="CA">California</option>
+                        <option value="NV">Nevada</option>
+                        <option value="OR">Oregon</option>
+                        <option value="WA">Washington</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CO">Colorado</option>
+                        <option value="ID">Idaho</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="UT">Utah</option>
+                        <option value="WY">Wyoming</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TX">Texas</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="IN">Indiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="OH">Ohio</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WV">West Virginia</option>
+                      </select>
+                    </div>
+                    <div class="dropdown-menu-footer">
+                      <a href="#" class="btn btn-primary btn-sm">Apply</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- filter btn start -->
+                <div class="btn-group" role="group">
+                  <button
+                    id="space-city"
+                    type="button"
+                    class="btn btn-white btn-sm dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Space Type
+                  </button>
+                  <div
+                    class="dropdown-menu city-menu"
+                    aria-labelledby="space-city"
+                  >
+                    <span class="with-arrow"><span class=""></span></span>
+                    <div class="dropdown-menu-body city-menu-body stopevent">
+                      <h4 class="menu-title">Space Type</h4>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck14"
+                        />
+                        <label class="custom-control-label" for="customCheck14"
+                          >Office Space</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck15"
+                        />
+                        <label class="custom-control-label" for="customCheck15"
+                          >Coworking Space</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck16"
+                        />
+                        <label class="custom-control-label" for="customCheck16"
+                          >Meeting Space</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck17"
+                        />
+                        <label class="custom-control-label" for="customCheck17"
+                          >Event Space</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="customCheck18"
+                        />
+                        <label class="custom-control-label" for="customCheck18"
+                          >Retail Space</label
+                        >
+                      </div>
+                    </div>
+                    <div class="dropdown-menu-footer">
+                      <a href="#" class="btn btn-primary btn-sm">Apply</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- filter btn start -->
+                <div class="btn-group" role="group">
+                  <button
+                    id="amenities"
+                    type="button"
+                    class="btn btn-white btn-sm dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Amenities
+                  </button>
+                  <div
+                    class="dropdown-menu amenities-menu"
+                    aria-labelledby="amenities"
+                  >
+                    <span class="with-arrow"><span class=""></span></span>
+                    <div
+                      class="dropdown-menu-body amenities-menu-body stopevent"
+                    >
+                      <h4 class="menu-title">Amenities</h4>
+                      <div class="row">
+                        <div
+                          class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12"
+                        >
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck19"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck19"
+                              >Furnished</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck20"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck20"
+                              >24/7 Access</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck21"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck21"
+                              >Accessibility</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck22"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck22"
+                              >Bike Rack</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck23"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck23"
+                              >Coffee/Tea</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck24"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck24"
+                              >Door w/Lock</label
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12"
+                        >
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck25"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck25"
+                              >Kitchen</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck26"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck26"
+                              >Mailbox Services</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck27"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck27"
+                              >Meeting Rooms</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck28"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck28"
+                              >Print/Scan/Copy</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck29"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck29"
+                              >WiFi Phone</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck30"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck30"
+                              >Parking</label
+                            >
+                          </div>
+                        </div>
+                        <div
+                          class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12"
+                        >
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck31"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck31"
+                              >Catering</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck32"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck32"
+                              >Hosted Reception</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck34"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck34"
+                              >On-site Restaurant</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck35"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck35"
+                              >Pet Friendly</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck36"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck36"
+                              >Storage</label
+                            >
+                          </div>
+                          <div class="custom-control custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheck37"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheck37"
+                              >Window View</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="dropdown-menu-footer">
+                      <a href="#" class="btn btn-primary btn-sm">Apply</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- listing map filter start -->
+      <div class="listinghalfmap-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+              <!-- listsingle map start -->
+              <div class="listinghalfmap-content">
+                <div class="row">
+                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <!-- listing block start  -->
+                    <div class="card mb-3 mb-lg-4">
+                      <div class="card-img position-relative">
+                        <a href="listing-single.html">
+                          <img
+                            src="../assets/images/listing-img-1.jpg"
+                            alt=""
+                            class="img-fluid rounded-top w-100"
+                          />
+                          <div class="card-overlay-badge badge badge-primary">
+                            Featured
+                          </div>
+                        </a>
+
+                        <a
+                          href="listing-single.html"
+                          class="badge badge-success card-overlay-category"
+                        >
+                          Office Space
+                        </a>
+                        <div class="btn-wishlist card-overlay-btn"></div>
+                      </div>
+                      <div class="card-body">
+                        <div class="mb-2">
+                          <a href="listing-single.html">
+                            <h3 class="h5 mb-1 text-truncate">
+                              Heading for Office Space Title
+                            </h3></a
+                          >
+                          <p class="font-14">Ahmedabad, Gujarat, India</p>
+                        </div>
+                        <div class="mb-3 font-12">
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star-half text-warning"></span>
+                          <a
+                            href="listing-single.html"
+                            class="badge badge-success ml-1"
+                            >4.5</a
+                          >
+                        </div>
+                        <div class="">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <div class="font-weight-medium">
+                              <span class="font-12">Monthly</span> <br />
+                              <span class="font-14 text-dark">$2250</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">People</span> <br />
+                              <span class="font-14 text-dark">12</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">Sq.Ft</span> <br />
+                              <span class="font-14 text-dark">1200</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- listing block close  -->
+                  </div>
+                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <!-- listing block start  -->
+                    <div class="card mb-3 mb-lg-4">
+                      <div class="card-img position-relative">
+                        <a href="listing-single.html">
+                          <img
+                            src="../assets/images/listing-img-1.jpg"
+                            alt=""
+                            class="img-fluid rounded-top w-100"
+                        /></a>
+                        <a
+                          href="listing-single.html"
+                          class="badge badge-secondary card-overlay-category"
+                        >
+                          Meeting Space
+                        </a>
+                        <div class="btn-wishlist card-overlay-btn"></div>
+                      </div>
+                      <div class="card-body">
+                        <div class="listing-content-head">
+                          <a href="listing-single.html"
+                            ><h3 class="h5 mb-1 text-truncate">
+                              Meeting Office Space Title
+                            </h3></a
+                          >
+                          <p class="font-14">Surat, Gujarat, India</p>
+                        </div>
+                        <div class="mb-3 font-12">
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <a
+                            href="listing-single.html"
+                            class="badge badge-success ml-1"
+                            >5.0</a
+                          >
+                        </div>
+                        <div class="">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <div class="font-weight-medium">
+                              <span class="font-12">Hourly</span> <br />
+                              <span class="font-14 text-dark">$50</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">People</span> <br />
+                              <span class="font-14 text-dark">3</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">Sq.Ft</span> <br />
+                              <span class="font-14 text-dark">360</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- listing block close  -->
+                  </div>
+                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <!-- listing block start  -->
+                    <div class="card mb-3 mb-lg-4">
+                      <div class="card-img position-relative">
+                        <a href="listing-single.html">
+                          <img
+                            src="../assets/images/listing-img-1.jpg"
+                            alt=""
+                            class="img-fluid rounded-top w-100"
+                        /></a>
+                        <a
+                          href="listing-single.html"
+                          class="badge badge-danger card-overlay-category"
+                        >
+                          Coworking Space
+                        </a>
+                        <div class="btn-wishlist card-overlay-btn"></div>
+                      </div>
+                      <div class="card-body">
+                        <div class="listing-content-head">
+                          <a href="listing-single.html">
+                            <h3 class="h5 mb-1 text-truncate">
+                              Coworking Office Space Title
+                            </h3></a
+                          >
+                          <p class="font-14">Vadodara, Gujarat, India</p>
+                        </div>
+                        <div class="mb-3 font-12">
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-light"></span>
+                          <a
+                            href="listing-single.html"
+                            class="badge badge-success ml-1"
+                            >4.0</a
+                          >
+                        </div>
+                        <div class="">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <div class="font-weight-medium">
+                              <span class="font-12">Weekly</span> <br />
+                              <span class="font-14 text-dark">$250</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">People</span> <br />
+                              <span class="font-14 text-dark">24</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">Sq.Ft</span> <br />
+                              <span class="font-14 text-dark">2200</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- listing block close  -->
+                  </div>
+                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <!-- listing block start  -->
+                    <div class="card mb-3 mb-lg-4">
+                      <div class="card-img position-relative">
+                        <a href="listing-single.html">
+                          <img
+                            src="../assets/images/listing-img-1.jpg"
+                            alt=""
+                            class="img-fluid rounded-top w-100"
+                        /></a>
+                        <a
+                          href="listing-single.html"
+                          class="badge badge-info card-overlay-category"
+                        >
+                          Meeting Space
+                        </a>
+                        <div class="btn-wishlist card-overlay-btn"></div>
+                      </div>
+                      <div class="card-body">
+                        <div class="listing-content-head">
+                          <a href="listing-single.html"
+                            ><h3 class="h5 mb-1 text-truncate">
+                              Meeting Office Space Title
+                            </h3></a
+                          >
+                          <p class="font-14">Vadodara, Gujarat, India</p>
+                        </div>
+                        <div class="mb-3 font-12">
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-light"></span>
+                          <a
+                            href="listing-single.html"
+                            class="badge badge-success ml-1"
+                            >4.0</a
+                          >
+                        </div>
+                        <div class="">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <div class="font-weight-medium">
+                              <span class="font-12"> Weekly</span> <br />
+                              <span class="font-14 text-dark">$250</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">People</span> <br />
+                              <span class="font-14 text-dark">24</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">Sq.Ft</span> <br />
+                              <span class="font-14 text-dark">2200</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- listing block close  -->
+                  </div>
+                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <!-- listing block start  -->
+                    <div class="card mb-3 mb-lg-4">
+                      <div class="card-img position-relative">
+                        <a href="listing-single.html">
+                          <img
+                            src="../assets/images/listing-img-1.jpg"
+                            alt=""
+                            class="img-fluid rounded-top w-100"
+                        /></a>
+                        <a
+                          href="listing-single.html"
+                          class="badge badge-primary card-overlay-category"
+                        >
+                          Coworking Space
+                        </a>
+                        <div class="btn-wishlist card-overlay-btn"></div>
+                      </div>
+                      <div class="card-body">
+                        <div class="listing-content-head">
+                          <a href="listing-single.html">
+                            <h3 class="h5 mb-1 text-truncate">
+                              Coworking Office Space Title
+                            </h3></a
+                          >
+                          <p class="font-14">Vadodara, Gujarat, India</p>
+                        </div>
+                        <div class="mb-3 font-12">
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-light"></span>
+                          <a
+                            href="listing-single.html"
+                            class="badge badge-success ml-1"
+                            >4.0</a
+                          >
+                        </div>
+                        <div class="">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <div class="font-weight-medium">
+                              <span class="font-12">Weekly</span> <br />
+                              <span class="font-14 text-dark">$250</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">People</span> <br />
+                              <span class="font-14 text-dark">24</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">Sq.Ft</span> <br />
+                              <span class="font-14 text-dark">2200</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- listing block close  -->
+                  </div>
+                  <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <!-- listing block start  -->
+                    <div class="card mb-3 mb-lg-4">
+                      <div class="card-img position-relative">
+                        <a href="listing-single.html">
+                          <img
+                            src="../assets/images/listing-img-1.jpg"
+                            alt=""
+                            class="img-fluid rounded-top w-100"
+                        /></a>
+                        <a
+                          href="listing-single.html"
+                          class="badge badge-success card-overlay-category"
+                        >
+                          Office Space
+                        </a>
+                        <div class="btn-wishlist card-overlay-btn"></div>
+                      </div>
+                      <div class="card-body">
+                        <div class="listing-content-head">
+                          <a href="listing-single.html"
+                            ><h3 class="h5 mb-1 text-truncate">
+                              Heading for Office Space Title
+                            </h3></a
+                          >
+                          <p class="font-14">Vadodara, Gujarat, India</p>
+                        </div>
+                        <div class="mb-3 font-12">
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-warning"></span>
+                          <span class="fas fa-star text-light"></span>
+                          <a
+                            href="listing-single.html"
+                            class="badge badge-success ml-1"
+                            >4.0</a
+                          >
+                        </div>
+                        <div class="">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <div class="font-weight-medium">
+                              <span class="font-12"> Weekly</span> <br />
+                              <span class="font-14 text-dark">$250</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">People</span> <br />
+                              <span class="font-14 text-dark">24</span>
+                            </div>
+                            <div class="font-weight-medium">
+                              <span class="font-12">Sq.Ft</span> <br />
+                              <span class="font-14 text-dark">2200</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- listing block close  -->
+                  </div>
+                  
+                  <div
+                    class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3"
+                  >
+                    <!-- pagination start -->
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination">
+                        <li class="page-item">
+                          <a class="page-link" href="#">Previous</a>
+                        </li>
+                        <li class="page-item active">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
+                    <!-- pagination close -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- listsingle map close -->
+            </div>
+            <div
+              class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12 pl-0 order-1 d-none d-xl-block d-lg-block half-map-side"
+            >
+              <div id="mapid_2" class="half-map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- end main wrapper -->
+    <!-- ============================================================== -->
+    @@include("../partials/scripts.html")
+  </body>
+</html>

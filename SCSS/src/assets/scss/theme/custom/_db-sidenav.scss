@@ -1,0 +1,88 @@
+// dashboard side navigation 
+
+
+.db-sidenav {
+  padding: 10px 0px;
+  position: relative;
+  height: 100%;
+  display: inline-block;
+  overflow: auto;
+  width: 210px;
+  z-index: 77;
+  .navbar {
+    padding: 0px;
+  }
+  .icon-bar {
+    width: 21px;
+    height: 3px;
+    background-color: $black;
+    display: block;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    margin-top: 4px;
+  }
+  .navbar-toggler {
+    &:focus {
+      outline: 0px;
+    }
+    .top-bar {
+      transform: rotate(45deg);
+      transform-origin: 10% 190%;
+      background-color: $black;
+    }
+    .middle-bar {
+      opacity: 0;
+    }
+    .bottom-bar {
+      transform: rotate(-45deg);
+      transform-origin: 10% -80%;
+      background-color: $black;
+    }
+  }
+  .navbar-toggler.collapsed {
+    .top-bar {
+      transform: rotate(0);
+      background-color: $black;
+    }
+    .middle-bar {
+      opacity: 1;
+    }
+    .bottom-bar {
+      transform: rotate(0);
+      background-color: $black;
+    }
+  }
+}
+.db-sidenav.navbar {
+  .nav {
+    width: 100%;
+    .nav-item {
+      .nav-link {
+        font-size: 15px;
+        line-height: 22px;
+        color: $gray-600;
+        font-weight: 500;
+        padding: 8px 16px;
+       
+        border-radius: .25rem;
+        &:hover {
+          background-color: $primary;
+          color: $white;
+          border-radius: .25rem;
+          
+        }
+        i {
+          font-size: 12px;
+          line-height: 22px;
+          margin-right: 8px;
+        }
+      }
+      .nav-link.active {
+        background-color: $primary;
+        color: $white;
+        border-radius: .25rem;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}

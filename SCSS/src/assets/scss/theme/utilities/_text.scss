@@ -1,0 +1,31 @@
+// Extent from bootstrap
+
+// Text
+
+
+.font-weight-medium {
+    font-weight: $font-weight-medium !important;
+}
+
+//  fonts
+
+$font-size: font !default;
+
+@for $i from 12 through 20 {
+  .#{$font-size}-#{$i} {
+    font-size: 0px + $i;
+  }
+}
+
+
+
+
+// Type scss
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+    letter-spacing: -0.02rem;
+}

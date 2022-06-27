@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+<meta name="description" content="SpaceCity Dashboard" />
+<title>Admin Dashboard</title>
+<!-- Bootstrap CSS -->
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+<!-- Libs CSS -->
+<link rel="stylesheet" href="../assets/libs/dropzone/dist/min/dropzone.min.css">
+
+
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="../assets/css/theme.min.css">
+
+<title>@@pageTitle</title>
+</head>
+
+<body class="bg-light">
+<div class="db-wrapper">
+    <div class="db-header">
+    <!-- header start -->
+    <!-- navigation start -->
+    <nav class="navbar navbar-expand-lg db-navbar fixed-top bg-white navbar-light shadow-sm">
+        <div class="db-navbar-brand"><a class="" href="../index.html" style="padding: 10px;">
+        <img
+            src="../assets/images/LOGO_METROTEL-removebg-2.png" 
+            alt="" 
+            style="height:80px;width: 95px;"/></a></div>
+        <div class="db-navbar-toggler order-3 ml-3 ml-lg-0">
+        <button class="navbar-toggler" type="button"
+            data-toggle="collapse" data-target="#navbardbCollapse" aria-controls="navbardbCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        </div>
+
+    </nav>
+    <!-- navigation close -->
+    <!-- header close -->
+    </div>
+    <!-- content start -->
+    <div class="db-content py-lg-15 py-11">
+    <div class="container">
+        <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <nav class="navbar navbar-expand-lg db-sidenav">
+            <div class="collapse navbar-collapse" id="navbardbCollapse">
+                <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html"
+                    ><i class="fas fa-fw fa-sign-out-alt"></i>Logout</a
+                    >
+                </li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4">
+                <h2 class="h3 mb-0">Custodian</h2>
+                <!-- <p class="">
+                    In commodo lorem ut erat sagittis variusm euismod lectus
+                    vehicula cursus est.
+                </p> -->
+                </div>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+                <div class="card ">
+                <h3 class="card-header bg-white h6 mb-0 border-bottom-0">
+                    List Perusahaan
+                </h3>
+                <div class="table-responsive">
+                    <table class="table mb-0">
+                    <tbody>
+                        <tr>
+                        <td class="align-middle">
+                            PT XXX
+                        </td>
+                        <td class="align-middle">
+                            <button id="approve" style="border: none; background-color: rgb(114, 198, 114);">Terima</button>
+                            <span></span>
+                            <button id="reject" style="border: none; background-color: rgb(230, 70, 70);">Tolak</button>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td class="align-middle">
+                            PT YYY
+                        </td>
+                        <td class="align-middle">
+                            <button id="approve" style="border: none; background-color: rgb(114, 198, 114);">Terima</button>
+                            <span></span>
+                            <button id="reject" style="border: none; background-color: rgb(230, 70, 70);">Tolak</button>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td class="align-middle">
+                            PT ZZZ
+                        </td>
+                        <td class="align-middle">
+                            <button id="approve" style="border: none; background-color: rgb(114, 198, 114);">Terima</button>
+                            <span></span>
+                            <button id="reject" style="border: none; background-color: rgb(230, 70, 70);">Tolak</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <div class="card-body border-top">
+                    <a
+                        href="dashboard-portofolio.html"
+                        class="btn btn-primary btn-sm"
+                        >See All Portofolio</a
+                    >
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+                <div class="card ">
+                    <h3 class="card-header bg-white h6 mb-0 border-bottom-0">
+                    List Perusahaan Yang Terdaftar
+                    </h3>
+                    <div class="table-responsive ">
+                    <table class="table mb-0">
+                        <tbody>
+                        <tr>
+                            <th>Jadwal</th>
+                            <th>Mulai</th>
+                            <th>Selesai</th>
+                            <th>Target</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td class="align-middle" id="namaPerusahaan">
+                            PT XXX
+                            </td>
+                            <td class="align-middle" id="mulai">
+                            08:00
+                            </td>
+                            <td class="align-middle" id="selesai">
+                            10.00
+                            </td>
+                            <td class="align-middle" id="target">
+                            $870.000
+                            </td>
+                            <td class="align-middle">
+                            <button id="status" style="border: none; background-color: rgb(114, 198, 114);">Aktif</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle" id="namaPerusahaan">
+                                PT YYY
+                            </td>
+                            <td class="align-middle" id="mulai">
+                                08:00
+                            </td>
+                            <td class="align-middle" id="selesai">
+                                10.00
+                            </td>
+                            <td class="align-middle" id="target">
+                                $870.000
+                            </td>
+                            <td class="align-middle">
+                                <button id="status" style="border: none; background-color: rgb(235, 98, 98);">Selesai</button>
+                            </td>
+                            </tr>
+                            <tr>
+                            <td class="align-middle" id="namaPerusahaan">
+                                PT ZZZ
+                            </td>
+                            <td class="align-middle" id="mulai">
+                                08:00
+                            </td>
+                            <td class="align-middle" id="selesai">
+                                10.00
+                            </td>
+                            <td class="align-middle" id="target">
+                                $870.000
+                            </td>
+                            <td class="align-middle">
+                                <button id="status" style="border: none; background-color: rgb(114, 198, 114);">Aktif</button>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="card-body border-top">
+                        <a
+                        href="dashboard-portofolio.html"
+                        class="btn btn-primary btn-sm"
+                        >See All Portofolio</a
+                        >
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- content close -->
+    <!-- footer start -->
+
+    <!-- footer close -->
+</div>
+<!-- ============================================================== -->
+<!-- end main wrapper -->
+<!-- ============================================================== -->
+<!-- Libs JS -->
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/libs/select2/dist/js/select2.full.min.js"></script>
+    <script src="../assets/libs/select2/dist/js/select2.min.js"></script>
+    <script src="../assets/libs/jquery-raty-js/lib/jquery.raty.js"></script>
+    <script src="../assets/libs/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/libs/dataTables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../assets/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../assets/libs/jquery.easing/jquery.easing.min.js"></script>
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="../assets/libs/slick-carousel/slick/slick.min.js"></script>
+    <script src="../assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="../assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="../assets/libs/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+
+
+
+<!-- Theme JS -->
+<script src="../assets/js/theme.min.js"></script>
