@@ -24,12 +24,12 @@
        <nav
          class="navbar navbar-expand-lg py-2 navbar-light bg-white"
        >
-         <div class="container-fluid">
-           <a href="../index.html"
+         <div class="container-fluid" >
+           <a href="../index.html " style="padding: 10px;"
              ><img
-             src="../assets/images/LOGO_METROTEL-removebg-preview.png" 
+             src="../assets/images/LOGO_METROTEL-removebg-2.png" 
              alt="" 
-             style="width:150px;height:150px;"/></a>
+             style="width:95px;height:80px;"/></a>
            <button
              class="navbar-toggler collapsed"
              type="button"
@@ -73,30 +73,15 @@
                    aria-haspopup="true"
                    aria-expanded="false"
                  >
-                   Listing
+                   Category
                  </a>
                  <ul class="dropdown-menu" aria-labelledby="navbarListing">
-                  <li> <a class="dropdown-item" href="../pages/listing-grid-view.html">
-                     Listing List + Grid</a></li>
-
-                   <li><a class="dropdown-item" href="../pages/listing-list-view.html">
-                     Listing List View</a></li>
-
-                   <li><a class="dropdown-item" href="../pages/listing-map-view.html">
-                     Listing Map View</a></li>
-
-                  <li><a class="dropdown-item" href="../pages/listing-with-map.html">
-                     Listing with half Map</a></li>
-
-                   <li><a class="dropdown-item" href="../pages/listing-location.html">
-                     Listing Location</a></li>
-
-                   <a class="dropdown-item" href="../pages/listing-categories.html">
-                     Listing Category</a
-                   >
-
-                  <li> <a class="dropdown-item" href="../pages/listing-single.html">
-                     Listing Single</a></li>
+                  <li> <a class="dropdown-item" href="listing-grid-view.html">
+                    Sharing Profit Commercial Area</a></li>
+                 <li> <a class="dropdown-item" href="listing-CoWorkingSpace.html">
+                    Co Working Space</a></li>
+                 <li> <a class="dropdown-item" href="listing-grid-view.html">
+                    Co Working Factory</a></li>
                    </ul>
                </li>
                <li class="nav-item dropdown">
@@ -151,7 +136,7 @@
 
                  </ul>
                </li>
-               <li class="nav-item dropdown">
+               <!-- <li class="nav-item dropdown">
                  <a
                    class="nav-link dropdown-toggle"
                    href="#"
@@ -177,7 +162,7 @@
                              Blog Single</a>
                      </li>
                  </ul>
-               </li>
+               </li> -->
           
                <li class="nav-item">
                  <a class="nav-link" href="../docs/index.html">
@@ -199,8 +184,8 @@
        </nav>
      </div>
 
-    <!-- header close -->
-    <!-- pageheader start  -->
+   
+    <!-- pageheader start -->
     <div
       class="pageheader"
       style="
@@ -213,520 +198,913 @@
         <div class="row">
           <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="pageheader-caption">
-              <h1 class="pageheader-caption-title">Listing Categories</h1>
+              <h1 class="pageheader-caption-title">Sharing Profit Commercial Area</Area></h1>
               <p class="pageheader-caption-text">
                 Change your layout in grid and list view example using bootstrap
-                4. Design elements using Bootstrap, javascript, css, and
-                html....
+                4. Design elements using Bootstrap, javascript, css, and html.
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- pageheader close  -->
+    <!-- pageheader close -->
     <div class="container">
       <div class="row">
         <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
-          <!-- breadcrumb start  -->
+          <!-- breadcrumb start -->
           <div class="custom-breadcrumb">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Listing Categories</li>
+                <li class="breadcrumb-item active">Layout Grid & List</li>
               </ol>
             </nav>
           </div>
-          <!-- breadcrumb close  -->
+          <!-- breadcrumb close -->
         </div>
       </div>
     </div>
     <div class="pb-5 pt-5">
       <div class="container">
         <div class="row">
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <!-- listing block start  -->
-            <div class="card mb-3 mb-lg-4">
-              <div class="card-img position-relative">
-                <a href="listing-single.html">
-                  <img
-                    src="../assets/images/listing-img-1.jpg"
-                    alt=""
-                    class="img-fluid rounded-top w-100"
-                  />
-                  <div class="card-overlay-badge badge badge-primary">
-                    Featured
-                  </div>
-                </a>
+          <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="row">
+              <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 mb-4">
+                <!-- page switcher start -->
+                <div class="page-switcher">
+                  <a href="listing-list-view.html"
+                    ><i class="fas fa-list icon-shape border p-3 rounded"></i
+                  ></a>
+                  <a href="listing-grid-view.html" class="active"
+                    ><i
+                      class="fas fa-th icon-shape border p-3 rounded bg-primary text-white"
+                    ></i
+                  ></a>
+                  <a href="listing-map-view.html"
+                    ><i
+                      class="fas fa-map-marker-alt icon-shape border p-3 rounded"
+                    ></i
+                  ></a>
+                </div>
+                <!-- page switcher close -->
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
+                <!-- select form start -->
+                <select
+                  class="select2 form-control custom-select"
+                  id="search-hide"
+                >
+                  <option selected>Default</option>
+                  <option value="1">Most Viewed</option>
+                  <option value="2">Newest Listing</option>
+                  <option value="3">Older Listing</option>
+                </select>
+                <!-- select form close -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <!-- listing block start  -->
+                <div class="card mb-3 mb-lg-4">
+                  <div class="card-img position-relative">
+                    <a href="listing-single.html">
+                      <img
+                        src="../assets/images/listing-img-1.jpg"
+                        alt=""
+                        class="img-fluid rounded-top w-100"
+                      />
+                      <div class="card-overlay-badge badge badge-primary">
+                        Featured
+                      </div>
+                    </a>
 
-                <a
-                  href="listing-single.html"
-                  class="badge badge-success card-overlay-category"
-                >
-                  Office Space
-                </a>
-                <div class="btn-wishlist card-overlay-btn"></div>
-              </div>
-              <div class="card-body">
-                <div class="mb-2">
-                  <a href="listing-single.html">
-                    <h3 class="h5 mb-1 text-truncate">
-                      Heading for Office Space Title
-                    </h3></a
-                  >
-                  <p class="font-14">Ahmedabad, Gujarat, India</p>
-                </div>
-                <div class="mb-3 font-12">
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star-half text-warning"></span>
-                  <a href="listing-single.html" class="badge badge-success ml-1"
-                    >4.5</a
-                  >
-                </div>
-                <div class="">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="font-weight-medium">
-                      <span class="font-12">Monthly</span> <br />
-                      <span class="font-14 text-dark">$2250</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">People</span> <br />
-                      <span class="font-14 text-dark">12</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">Sq.Ft</span> <br />
-                      <span class="font-14 text-dark">1200</span>
-                    </div>
+                    <a
+                      href="listing-single.html"
+                      class="badge badge-success card-overlay-category"
+                    >
+                      Fashion
+                    </a>
+                    <div class="btn-wishlist card-overlay-btn"></div>
                   </div>
-                </div>
-              </div>
-            </div>
+                  <div class="card-body">
+                    <div class="mb-2">
+                      <a href="listing-single.html">
+                        <h3 class="h5 mb-1 text-truncate">
+                          Space Available
+                        </h3></a
+                      >
+                      <p class="font-14">Jakarta, Indonesia</p>
+                    </div>
+                    <!-- <div class="mb-3 font-12">
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <a
+                        href="listing-single.html"
+                        class="badge badge-success ml-1"
+                        >5.0</a
+                      >
+                    </div> -->
+                    <div class="">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <!-- <div class="font-weight-medium">
+                          <span class="font-12">Company</span> <br />
+                          <span class="font-14 text-dark">PT YTTF</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">Vote Participan </span> <br />
+                          <span class="font-14 text-dark">12</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">time period</span> <br />
+                          <span class="font-14 text-dark">80 Day</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">Industry</span> <br />
+                          <span class="font-14 text-dark">Fashion</span>
+                        </div> -->
+                        <table class="table mb-0">
+                          <tbody>
+                            <tr>
+                              <td class="align-middle">
+                                Company
+                              </td>
+                              <td class="align-right">
+                                PT CTR
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Vote Participan
+                              </td>
+                              <td class="align-right">
+                                12
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Time period
+                              </td>
+                              <td class="align-right">
+                                80 Day
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Industry
+                              </td>
+                              <td class="align-middle">
+                                Fashion
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
 
-            <!-- listing block close  -->
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <!-- listing block start  -->
-            <div class="card mb-3 mb-lg-4">
-              <div class="card-img position-relative">
-                <a href="listing-single.html">
-                  <img
-                    src="../assets/images/listing-img-1.jpg"
-                    alt=""
-                    class="img-fluid rounded-top w-100"
-                /></a>
-                <a
-                  href="listing-single.html"
-                  class="badge badge-secondary card-overlay-category"
-                >
-                  Meeting Space
-                </a>
-                <div class="btn-wishlist card-overlay-btn"></div>
-              </div>
-              <div class="card-body">
-                <div class="listing-content-head">
-                  <a href="listing-single.html"
-                    ><h3 class="h5 mb-1 text-truncate">
-                      Meeting Office Space Title
-                    </h3></a
-                  >
-                  <p class="font-14">Surat, Gujarat, India</p>
-                </div>
-                <div class="mb-3 font-12">
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <a href="listing-single.html" class="badge badge-success ml-1"
-                    >5.0</a
-                  >
-                </div>
-                <div class="">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="font-weight-medium">
-                      <span class="font-12">Hourly</span> <br />
-                      <span class="font-14 text-dark">$50</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">People</span> <br />
-                      <span class="font-14 text-dark">3</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">Sq.Ft</span> <br />
-                      <span class="font-14 text-dark">360</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- listing block close  -->
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <!-- listing block start  -->
-            <div class="card mb-3 mb-lg-4">
-              <div class="card-img position-relative">
-                <a href="listing-single.html">
-                  <img
-                    src="../assets/images/listing-img-1.jpg"
-                    alt=""
-                    class="img-fluid rounded-top w-100"
-                /></a>
-                <a
-                  href="listing-single.html"
-                  class="badge badge-danger card-overlay-category"
-                >
-                  Coworking Space
-                </a>
-                <div class="btn-wishlist card-overlay-btn"></div>
-              </div>
-              <div class="card-body">
-                <div class="listing-content-head">
-                  <a href="listing-single.html">
-                    <h3 class="h5 mb-1 text-truncate">
-                      Coworking Office Space Title
-                    </h3></a
-                  >
-                  <p class="font-14">Vadodara, Gujarat, India</p>
-                </div>
-                <div class="mb-3 font-12">
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-light"></span>
-                  <a href="listing-single.html" class="badge badge-success ml-1"
-                    >4.0</a
-                  >
-                </div>
-                <div class="">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="font-weight-medium">
-                      <span class="font-12">Weekly</span> <br />
-                      <span class="font-14 text-dark">$250</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">People</span> <br />
-                      <span class="font-14 text-dark">24</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">Sq.Ft</span> <br />
-                      <span class="font-14 text-dark">2200</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- listing block close  -->
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <!-- listing block start  -->
-            <div class="card mb-3 mb-lg-4">
-              <div class="card-img position-relative">
-                <a href="listing-single.html">
-                  <img
-                    src="../assets/images/listing-img-1.jpg"
-                    alt=""
-                    class="img-fluid rounded-top w-100"
-                /></a>
-                <a
-                  href="listing-single.html"
-                  class="badge badge-info card-overlay-category"
-                >
-                  Meeting Space
-                </a>
-                <div class="btn-wishlist card-overlay-btn"></div>
-              </div>
-              <div class="card-body">
-                <div class="listing-content-head">
-                  <a href="listing-single.html"
-                    ><h3 class="h5 mb-1 text-truncate">
-                      Meeting Office Space Title
-                    </h3></a
-                  >
-                  <p class="font-14">Vadodara, Gujarat, India</p>
-                </div>
-                <div class="mb-3 font-12">
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-light"></span>
-                  <a href="listing-single.html" class="badge badge-success ml-1"
-                    >4.0</a
-                  >
-                </div>
-                <div class="">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="font-weight-medium">
-                      <span class="font-12"> Weekly</span> <br />
-                      <span class="font-14 text-dark">$250</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">People</span> <br />
-                      <span class="font-14 text-dark">24</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">Sq.Ft</span> <br />
-                      <span class="font-14 text-dark">2200</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- listing block close  -->
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <!-- listing block start  -->
-            <div class="card mb-3 mb-lg-4">
-              <div class="card-img position-relative">
-                <a href="listing-single.html">
-                  <img
-                    src="../assets/images/listing-img-1.jpg"
-                    alt=""
-                    class="img-fluid rounded-top w-100"
-                  />
-                  <div class="card-overlay-badge badge badge-primary">
-                    Featured
-                  </div>
-                </a>
 
-                <a
-                  href="listing-single.html"
-                  class="badge badge-success card-overlay-category"
-                >
-                  Office Space
-                </a>
-                <div class="btn-wishlist card-overlay-btn"></div>
+                <!-- listing block close  -->
               </div>
-              <div class="card-body">
-                <div class="mb-2">
-                  <a href="listing-single.html">
-                    <h3 class="h5 mb-1 text-truncate">
-                      Heading for Office Space Title
-                    </h3></a
-                  >
-                  <p class="font-14">Ahmedabad, Gujarat, India</p>
-                </div>
-                <div class="mb-3 font-12">
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star-half text-warning"></span>
-                  <a href="listing-single.html" class="badge badge-success ml-1"
-                    >4.5</a
-                  >
-                </div>
-                <div class="">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="font-weight-medium">
-                      <span class="font-12">Monthly</span> <br />
-                      <span class="font-14 text-dark">$2250</span>
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <!-- listing block start  -->
+                <div class="card mb-3 mb-lg-4">
+                  <div class="card-img position-relative">
+                    <a href="listing-single.html">
+                      <img
+                        src="../assets/images/listing-img-1.jpg"
+                        alt=""
+                        class="img-fluid rounded-top w-100"
+                    /></a>
+                    <a
+                      href="listing-single.html"
+                      class="badge badge-secondary card-overlay-category"
+                    >
+                      Food
+                    </a>
+                    <div class="btn-wishlist card-overlay-btn"></div>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-content-head">
+                      <a href="listing-single.html"
+                        ><h3 class="h5 mb-1 text-truncate">
+                          Space Available
+                        </h3></a
+                      >
+                      <p class="font-14">Bandung, Indonesia</p>
                     </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">People</span> <br />
-                      <span class="font-14 text-dark">12</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">Sq.Ft</span> <br />
-                      <span class="font-14 text-dark">1200</span>
+                    <!-- <div class="mb-3 font-12">
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <a
+                        href="listing-single.html"
+                        class="badge badge-success ml-1"
+                        >5.0</a
+                      >
+                    </div> -->
+                    <div class="">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <!-- <div class="font-weight-medium">
+                          <span class="font-12">Hourly</span> <br />
+                          <span class="font-14 text-dark">$50</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">People</span> <br />
+                          <span class="font-14 text-dark">3</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">Sq.Ft</span> <br />
+                          <span class="font-14 text-dark">360</span>
+                        </div> -->
+                        <table class="table mb-0">
+                          <tbody>
+                            <tr>
+                              <td class="align-middle">
+                                Company
+                              </td>
+                              <td class="align-right">
+                                PT RRT
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Vote Participan
+                              </td>
+                              <td class="align-right">
+                                8
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Time period
+                              </td>
+                              <td class="align-right">
+                                32 Day
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Industry
+                              </td>
+                              <td class="align-middle">
+                                Food
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <!-- listing block close  -->
               </div>
-            </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <!-- listing block start  -->
+                <div class="card mb-3 mb-lg-4">
+                  <div class="card-img position-relative">
+                    <a href="listing-single.html">
+                      <img
+                        src="../assets/images/listing-img-1.jpg"
+                        alt=""
+                        class="img-fluid rounded-top w-100"
+                    /></a>
+                    <a
+                      href="listing-single.html"
+                      class="badge badge-danger card-overlay-category"
+                    >
+                      Hardware
+                    </a>
+                    <div class="btn-wishlist card-overlay-btn"></div>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-content-head">
+                      <a href="listing-single.html">
+                        <h3 class="h5 mb-1 text-truncate">
+                          Space Available
+                        </h3></a
+                      >
+                      <p class="font-14">Surabaya, Indonesia</p>
+                    </div>
+                    <!-- <div class="mb-3 font-12">
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-light"></span>
+                      <a
+                        href="listing-single.html"
+                        class="badge badge-success ml-1"
+                        >4.0</a
+                      >
+                    </div> -->
+                    <div class="">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <!-- <div class="font-weight-medium">
+                          <span class="font-12">Weekly</span> <br />
+                          <span class="font-14 text-dark">$250</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">People</span> <br />
+                          <span class="font-14 text-dark">24</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">Sq.Ft</span> <br />
+                          <span class="font-14 text-dark">2200</span>
+                        </div> -->
+                        <table class="table mb-0">
+                          <tbody>
+                            <tr>
+                              <td class="align-middle">
+                                Company
+                              </td>
+                              <td class="align-right">
+                                PT RRT
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Vote Participan
+                              </td>
+                              <td class="align-right">
+                                8
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Time period
+                              </td>
+                              <td class="align-right">
+                                32 Day
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Industry
+                              </td>
+                              <td class="align-middle">
+                                Hardware
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- listing block close  -->
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <!-- listing block start  -->
+                <div class="card mb-3 mb-lg-4">
+                  <div class="card-img position-relative">
+                    <a href="listing-single.html">
+                      <img
+                        src="../assets/images/listing-img-1.jpg"
+                        alt=""
+                        class="img-fluid rounded-top w-100"
+                    /></a>
+                    <a
+                      href="listing-single.html"
+                      class="badge badge-info card-overlay-category"
+                    >
+                      Food
+                    </a>
+                    <div class="btn-wishlist card-overlay-btn"></div>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-content-head">
+                      <a href="listing-single.html"
+                        ><h3 class="h5 mb-1 text-truncate">
+                          Space Available
+                        </h3></a
+                      >
+                      <p class="font-14">Malang, Indonesia</p>
+                    </div>
+                    <!-- <div class="mb-3 font-12">
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-light"></span>
+                      <a
+                        href="listing-single.html"
+                        class="badge badge-success ml-1"
+                        >4.0</a
+                      >
+                    </div> -->
+                    <div class="">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <!-- <div class="font-weight-medium">
+                          <span class="font-12"> Weekly</span> <br />
+                          <span class="font-14 text-dark">$250</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">People</span> <br />
+                          <span class="font-14 text-dark">24</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">Sq.Ft</span> <br />
+                          <span class="font-14 text-dark">2200</span>
+                        </div> -->
+                        <table class="table mb-0">
+                          <tbody>
+                            <tr>
+                              <td class="align-middle">
+                                Company
+                              </td>
+                              <td class="align-right">
+                                PT AAA
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Vote Participan
+                              </td>
+                              <td class="align-right">
+                                13
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Time period
+                              </td>
+                              <td class="align-right">
+                                50 Day
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Industry
+                              </td>
+                              <td class="align-middle">
+                                Food
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- listing block close  -->
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <!-- listing block start  -->
+                <div class="card mb-3 mb-lg-4">
+                  <div class="card-img position-relative">
+                    <a href="listing-single.html">
+                      <img
+                        src="../assets/images/listing-img-1.jpg"
+                        alt=""
+                        class="img-fluid rounded-top w-100"
+                    /></a>
+                    <a
+                      href="listing-single.html"
+                      class="badge badge-primary card-overlay-category"
+                    >
+                      Hardware
+                    </a>
+                    <div class="btn-wishlist card-overlay-btn"></div>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-content-head">
+                      <a href="listing-single.html">
+                        <h3 class="h5 mb-1 text-truncate">
+                          Space Available 
+                        </h3></a
+                      >
+                      <p class="font-14">Yogyakarta, Indonesia</p>
+                    </div>
+                    <!-- <div class="mb-3 font-12">
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-light"></span>
+                      <a
+                        href="listing-single.html"
+                        class="badge badge-success ml-1"
+                        >4.0</a
+                      >
+                    </div> -->
+                    <div class="">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <!-- <div class="font-weight-medium">
+                          <span class="font-12">Weekly</span> <br />
+                          <span class="font-14 text-dark">$250</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">People</span> <br />
+                          <span class="font-14 text-dark">24</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">Sq.Ft</span> <br />
+                          <span class="font-14 text-dark">2200</span>
+                        </div> -->
+                        <table class="table mb-0">
+                          <tbody>
+                            <tr>
+                              <td class="align-middle">
+                                Company
+                              </td>
+                              <td class="align-right">
+                                PT BBB
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Vote Participan
+                              </td>
+                              <td class="align-right">
+                                11
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Time period
+                              </td>
+                              <td class="align-right">
+                                56 Day
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Industry
+                              </td>
+                              <td class="align-middle">
+                                Hardware
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- listing block close  -->
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <!-- listing block start  -->
+                <div class="card mb-3 mb-lg-4">
+                  <div class="card-img position-relative">
+                    <a href="listing-single.html">
+                      <img
+                        src="../assets/images/listing-img-1.jpg"
+                        alt=""
+                        class="img-fluid rounded-top w-100"
+                    /></a>
+                    <a
+                      href="listing-single.html"
+                      class="badge badge-success card-overlay-category"
+                    >
+                      Fashion
+                    </a>
+                    <div class="btn-wishlist card-overlay-btn"></div>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-content-head">
+                      <a href="listing-single.html"
+                        ><h3 class="h5 mb-1 text-truncate">
+                          Space Available
+                        </h3></a
+                      >
+                      <p class="font-14">Bali, Indonesia</p>
+                    </div>
+                    <!-- <div class="mb-3 font-12">
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-warning"></span>
+                      <span class="fas fa-star text-light"></span>
+                      <a
+                        href="listing-single.html"
+                        class="badge badge-success ml-1"
+                        >4.0</a
+                      > -->
+                    </div>
+                    <div class="">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <!-- <div class="font-weight-medium">
+                          <span class="font-12"> Weekly</span> <br />
+                          <span class="font-14 text-dark">$250</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">People</span> <br />
+                          <span class="font-14 text-dark">24</span>
+                        </div>
+                        <div class="font-weight-medium">
+                          <span class="font-12">Sq.Ft</span> <br />
+                          <span class="font-14 text-dark">2200</span>
+                        </div> -->
+                        <table class="table mb-0">
+                          <tbody>
+                            <tr>
+                              <td class="align-middle">
+                                Company
+                              </td>
+                              <td class="align-right">
+                                PT Raja
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Vote Participan
+                              </td>
+                              <td class="align-right">
+                                16
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Time period
+                              </td>
+                              <td class="align-right">
+                                70 Day
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-middle">
+                                Industry
+                              </td>
+                              <td class="align-middle">
+                                Fashion
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- listing block close  -->
+              </div>
 
-            <!-- listing block close  -->
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <!-- listing block start  -->
-            <div class="card mb-3 mb-lg-4">
-              <div class="card-img position-relative">
-                <a href="listing-single.html">
-                  <img
-                    src="../assets/images/listing-img-1.jpg"
-                    alt=""
-                    class="img-fluid rounded-top w-100"
-                /></a>
-                <a
-                  href="listing-single.html"
-                  class="badge badge-secondary card-overlay-category"
-                >
-                  Meeting Space
-                </a>
-                <div class="btn-wishlist card-overlay-btn"></div>
-              </div>
-              <div class="card-body">
-                <div class="listing-content-head">
-                  <a href="listing-single.html"
-                    ><h3 class="h5 mb-1 text-truncate">
-                      Meeting Office Space Title
-                    </h3></a
-                  >
-                  <p class="font-14">Surat, Gujarat, India</p>
-                </div>
-                <div class="mb-3 font-12">
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <a href="listing-single.html" class="badge badge-success ml-1"
-                    >5.0</a
-                  >
-                </div>
-                <div class="">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="font-weight-medium">
-                      <span class="font-12">Hourly</span> <br />
-                      <span class="font-14 text-dark">$50</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">People</span> <br />
-                      <span class="font-14 text-dark">3</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">Sq.Ft</span> <br />
-                      <span class="font-14 text-dark">360</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+                <!-- pagination start -->
+
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#">Previous</a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+
+                <!-- pagination close -->
               </div>
             </div>
-            <!-- listing block close  -->
           </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <!-- listing block start  -->
-            <div class="card mb-3 mb-lg-4">
-              <div class="card-img position-relative">
-                <a href="listing-single.html">
-                  <img
-                    src="../assets/images/listing-img-1.jpg"
-                    alt=""
-                    class="img-fluid rounded-top w-100"
-                /></a>
-                <a
-                  href="listing-single.html"
-                  class="badge badge-danger card-overlay-category"
-                >
-                  Coworking Space
-                </a>
-                <div class="btn-wishlist card-overlay-btn"></div>
-              </div>
+          <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <!-- filter sidebar -->
+            <div class="card">
               <div class="card-body">
-                <div class="listing-content-head">
-                  <a href="listing-single.html">
-                    <h3 class="h5 mb-1 text-truncate">
-                      Coworking Office Space Title
-                    </h3></a
-                  >
-                  <p class="font-14">Vadodara, Gujarat, India</p>
-                </div>
-                <div class="mb-3 font-12">
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-light"></span>
-                  <a href="listing-single.html" class="badge badge-success ml-1"
-                    >4.0</a
-                  >
-                </div>
-                <div class="">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="font-weight-medium">
-                      <span class="font-12">Weekly</span> <br />
-                      <span class="font-14 text-dark">$250</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">People</span> <br />
-                      <span class="font-14 text-dark">24</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">Sq.Ft</span> <br />
-                      <span class="font-14 text-dark">2200</span>
-                    </div>
+                <h3 class="mb-0 h4">
+                  <span class="p text-primary mr-2"
+                    ><i class="fas fa-sliders-h"></i></span
+                  >Filter
+                </h3>
+              </div>
+              <!-- filter widget -->
+              <!-- <div class="card-body border-top">
+                <a
+                  class="d-block h5 mb-0"
+                  data-toggle="collapse"
+                  href="#collapseExample"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  Price <i class="fas fa-angle-down ml-2 float-right"></i>
+                </a>
+                <div class="collapse show" id="collapseExample">
+                  <div class="py-3">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck1"
+                    />
+                    <label class="custom-control-label" for="customCheck1"
+                      >$0 - $100
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck2"
+                    />
+                    <label class="custom-control-label" for="customCheck2"
+                      >$100 - $200
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck3"
+                    />
+                    <label class="custom-control-label" for="customCheck3"
+                      >$200 - $300
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck4"
+                    />
+                    <label class="custom-control-label" for="customCheck4"
+                      >$300 - $400
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck5"
+                    />
+                    <label class="custom-control-label" for="customCheck5"
+                      >$400 - $500
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck6"
+                    />
+                    <label class="custom-control-label" for="customCheck6"
+                      >$500 - $600
+                    </label>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- listing block close  -->
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-            <!-- listing block start  -->
-            <div class="card mb-3 mb-lg-4">
-              <div class="card-img position-relative">
-                <a href="listing-single.html">
-                  <img
-                    src="../assets/images/listing-img-1.jpg"
-                    alt=""
-                    class="img-fluid rounded-top w-100"
-                /></a>
+                </div>
+              </div> -->
+              <!-- filter widget -->
+              <div class="card-body border-top">
                 <a
-                  href="listing-single.html"
-                  class="badge badge-info card-overlay-category"
+                  class="mb-0 d-block h5"
+                  data-toggle="collapse"
+                  href="#collapseExample2"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample2"
                 >
-                  Meeting Space
+                  Capacity <i class="fas fa-angle-down ml-2 float-right"></i>
                 </a>
-                <div class="btn-wishlist card-overlay-btn"></div>
-              </div>
-              <div class="card-body">
-                <div class="listing-content-head">
-                  <a href="listing-single.html"
-                    ><h3 class="h5 mb-1 text-truncate">
-                      Meeting Office Space Title
-                    </h3></a
-                  >
-                  <p class="font-14">Vadodara, Gujarat, India</p>
-                </div>
-                <div class="mb-3 font-12">
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-warning"></span>
-                  <span class="fas fa-star text-light"></span>
-                  <a href="listing-single.html" class="badge badge-success ml-1"
-                    >4.0</a
-                  >
-                </div>
-                <div class="">
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="font-weight-medium">
-                      <span class="font-12"> Weekly</span> <br />
-                      <span class="font-14 text-dark">$250</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">People</span> <br />
-                      <span class="font-14 text-dark">24</span>
-                    </div>
-                    <div class="font-weight-medium">
-                      <span class="font-12">Sq.Ft</span> <br />
-                      <span class="font-14 text-dark">2200</span>
-                    </div>
+                <div class="collapse show" id="collapseExample2">
+                  <div class="py-3">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck7"
+                    />
+                    <label class="custom-control-label" for="customCheck7"
+                      >1 Vote Participan
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck8"
+                    />
+                    <label class="custom-control-label" for="customCheck8"
+                      >2 - 5 Vote Participan
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck9"
+                    />
+                    <label class="custom-control-label" for="customCheck9"
+                      >5 - 10 Vote Participan
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck10"
+                    />
+                    <label class="custom-control-label" for="customCheck10"
+                      >10 - 15 Vote Participan
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck11"
+                    />
+                    <label class="custom-control-label" for="customCheck11"
+                      >15 - 25 Vote Participan
+                    </label>
                   </div>
                 </div>
+                </div>
+              </div>
+              <!-- filter widget -->
+              <!-- <div class="card-body border-top">
+                <a
+                  class="mb-0 d-block h5"
+                  data-toggle="collapse"
+                  href="#collapseExample3"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample3"
+                >
+                  Size <i class="fas fa-angle-down ml-2 float-right"></i>
+                </a>
+                <div class="collapse show" id="collapseExample3">
+                <div class="py-3">
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck12"
+                    />
+                    <label class="custom-control-label" for="customCheck12"
+                      >100 Sq.Ft
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck13"
+                    />
+                    <label class="custom-control-label" for="customCheck13"
+                      >100 Sq.Ft - 200 Sq.Ft
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck14"
+                    />
+                    <label class="custom-control-label" for="customCheck14"
+                      >200 Sq.Ft - 300 Sq.Ft
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck15"
+                    />
+                    <label class="custom-control-label" for="customCheck15"
+                      >300 Sq.Ft - 400 Sq.Ft
+                    </label>
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck16"
+                    />
+                    <label class="custom-control-label" for="customCheck16"
+                      >400 Sq.Ft - 500 Sq.Ft
+                    </label>
+                  </div>
+                </div>
+                </div>
+              </div> -->
+              <!-- filter widget -->
+              <div class="card-body border-top">
+                <a href="#" class="btn btn-primary btn-block">Search</a>
               </div>
             </div>
-            <!-- listing block close  -->
           </div>
         </div>
       </div>
