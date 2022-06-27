@@ -175,7 +175,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="dashboard-portofolio.html"
+                      <a class="nav-link active" href="dashboard-vote.html"
                         ><i class="fas fa-fw fa-receipt"></i>Vote</a
                       >
                     </li>
@@ -235,7 +235,7 @@
                 </div>
               </nav>
             </div>
-            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="col-xl-9 col-lg-9 col-md-10 col-sm-10 col-10">
               <!-- <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                   <div class="mb-4">
@@ -263,7 +263,7 @@
                   </a>
                   <div class="btn-wishlist card-overlay-btn"></div>
                 </div>
-                <div class="card-body">
+                  <div class="card-body">
                   <div class="listing-content-head">
                     <a href="listing-single.html"
                       ><h3 class="h5 mb-1 text-truncate">
@@ -338,8 +338,11 @@
                       </table>
                     </div>
                   </div>
-                </div>
               </div>
+              <div class="card mb-3 mb-lg-4">
+                <button onclick="like()" style="border: none; background-color: rgb(79, 236, 79);">Clik for vote</button>
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -376,3 +379,20 @@
 
     <!-- Theme JS -->
     <script src="../assets/js/theme.min.js"></script>
+    <script>
+        function like()
+        {
+            var like = document.getElementsByClassName("btn-wishlist card-overlay-btn");
+            if(like === "btn-wishlist card-overlay-btn")
+            {
+                document.getElementsByClassName("btn-wishlist card-overlay-btn").replace= "btn-wishlist card-overlay-btn liked"
+                like = document.getElementsByClassName("btn-wishlist card-overlay-btn liked")
+            }
+            else
+            {
+                document.getElementsByClassName("btn-wishlist card-overlay-btn liked").replace= "btn-wishlist card-overlay-btn"
+            }
+        }
+
+
+    </script>
